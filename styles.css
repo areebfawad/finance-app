@@ -12,19 +12,37 @@ body {
   max-width: 600px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #333; /* Dark gray */
+  background-color: rgba(0, 0, 0, 0.4); /* Dark gray */
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); opacity: 0.7;
 }
 
 h1 {
-  text-align: center;
+  text-align: center; font-size: 60px; margin-top: -50px;
   color: #00ff00; /* Bright green */ 
 }
 
 .input-section {
   margin-bottom: 20px;
+  text-align: center; /* Center align content */
 }
+
+.input-section h3 {
+  margin-bottom: 20px; /* Adjust spacing as needed */color: #fff;
+}
+
+input {
+  width: 150px; /* Adjust the width as needed */
+  display: block; /* Display input field as block element */
+  margin: 0 auto; /* Center align input field */
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #666; /* Dark gray border */
+  background-color: #444; /* Dark gray input background */
+  color: #fff; /* White text */
+}
+
+
 
 label {
   font-weight: bold;
@@ -32,7 +50,7 @@ label {
 }
 
 input {
-  width: 100%;
+  width: 170px; /* Adjust the width as needed */
   padding: 8px;
   margin-top: 5px;
   border-radius: 4px;
@@ -42,23 +60,25 @@ input {
 }
 
 .buttons {
-  display: flex;
-  justify-content: space-between;opacity: 0.7;
+  text-align: center; /* Center align content */
+  margin-bottom: 20px;opacity: 0.7;
 }
 
-button {
+.buttons button {
+  margin: 0 10px; /* Add space between buttons */
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  background-color: #007bff; /* Bright blue */
+  background-color: #003cff; /* Bright blue */
   color: #fff; /* White text */
-  transition: background-color 0.3s ease;opacity: 0.7;
+  transition: background-color 0.3s ease; 
 }
 
-button:hover {
+.buttons button:hover {
   background-color: #0056b3; /* Darker blue on hover */opacity: 0.7;
 }
+
 
 .summary {
   margin-top: 20px;opacity: 0.7;
@@ -105,7 +125,7 @@ button:hover {
 #transaction-list li:hover {
   background-color: #333; /* Darker gray on hover */opacity: 0.7;
 }
-.live-bg video{ position: absolute; right: 0; bottom: 0; z-index: -1; }  @media(min-aspect-ratio:16/9){.live-bg  video {width: 150%; height: auto; }}  .summary {
+.live-bg video{ position: absolute; right: 0; bottom: 0; z-index: -1; }  @media(min-aspect-ratio:16/9){.live-bg  video {width: 150%; height: auto; }}  @media(max-aspect-ratio:16/9){.live-bg  video {width: auto; height: 100%; }} .summary {
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -191,3 +211,4 @@ button:hover {
     max-width: 1024px; /* Adjust the max-width as needed */
   }
 }
+ 
