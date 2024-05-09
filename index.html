@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container"> <div class="live-bg"><video autoplay loop muted plays-inline><source src="video1.mp4" type="video/mp4"> </video></div>
+    <h1>Finance App</h1>
+    <div class="input-section">
+      <label for="amount">Enter Amount:</label>
+      <input type="number" id="amount">
+    </div>
+    <div class="buttons">
+      <button onclick="addIncome()">Income</button>
+      <button onclick="addExpenditure()">Expenditure</button>
+    </div>
+    <div class="summary">
+      <h2>Summary</h2>
+      <p>Total Income: <span id="total-income">0</span></p>
+      <p>Total Expenditure: <span id="total-expenditure">0</span></p>
+      <p id="balance">Balance: <span id="balance-value">0</span></p>
+      <p id="savings">Savings/Loss: <span id="savings-value">0</span></p>
+    </div>
+    <div class="timeline">
+      <h2>Transaction History</h2>
+      <ul id="transaction-list"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+ 
