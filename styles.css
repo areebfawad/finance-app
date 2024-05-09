@@ -1,106 +1,193 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1a1a1a; /* Dark background */
-    color: #fff; /* White text */
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a; /* Dark background */
+  color: transparent ; /* White text */
+  margin: 0;
+  padding: 0; 
+     
   }
   
+  
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #333; /* Dark gray */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); opacity: 0.7;
+}
+
+h1 {
+  text-align: center;
+  color: #00ff00; /* Bright green */
+}
+
+.input-section {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  color: #fff; /* White text */
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #666; /* Dark gray border */
+  background-color: #444; /* Dark gray input background */
+  color: #fff; /* White text */
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #007bff; /* Bright blue */
+  color: #fff; /* White text */
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.summary {
+  margin-top: 20px;
+}
+
+.summary h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  color: #00ff00; /* Bright green */
+}
+
+.summary p {
+  margin: 10px 0;
+}
+
+.summary span {
+  font-weight: bold;
+}
+
+.timeline {
+  margin-top: 20px;
+}
+
+.timeline h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  color: #00ff00; /* Bright green */
+}
+
+#transaction-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#transaction-list li {
+  margin: 5px 0;
+  padding: 5px;
+  border-left: 3px solid #007bff; /* Bright blue */
+  background-color: #444; /* Dark gray */
+  color: #fff; /* White text */
+  transition: background-color 0.3s ease;
+}
+
+#transaction-list li:hover {
+  background-color: #333; /* Darker gray on hover */
+}
+.live-bg video{ position: absolute; right: 0; bottom: 0; z-index: -1; }  @media(min-aspect-ratio:16/9){.live-bg  video {width: 150%; height: auto; }}  .summary {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.summary-box {
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #444; /* Dark gray */
+  transition: background-color 0.3s ease;
+}
+
+.summary-box:hover {
+  background-color: #333; /* Darker gray on hover */
+}
+
+.summary h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  color: #00ff00; /* Bright green */
+}
+
+.summary p {
+  margin: 10px 0;
+  color: #fff; /* White text */
+}
+.timeline {
+  margin-top: 20px;
+}
+
+.timeline h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  color: #00ff00; /* Bright green */
+}
+
+#transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#transaction-table th,
+#transaction-table td {
+  padding: 10px;
+  border: 1px solid #666; /* Dark gray border */
+  background-color: #444; /* Dark gray */
+  color: #fff; /* White text */
+  text-align: center; /* Center align text */
+}
+
+#transaction-table th {
+  background-color: #333; /* Dark gray */
+}
+
+#transaction-table th:first-child,
+#transaction-table td:first-child {
+  border-left: none;
+}
+
+#transaction-table th:last-child,
+#transaction-table td:last-child {
+  border-right: none;
+}
+
+#transaction-table tbody tr:hover {
+  background-color: #333; /* Darker gray on hover */
+}
+ /* Default styles */
+
+/* Add here the default styles that apply to all screen sizes */
+
+/* Tablet and desktop styles */
+@media only screen and (min-width: 768px) {
   .container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #333; /* Dark gray */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); opacity: 0.7;
+    max-width: 800px; /* Adjust the max-width as needed */
   }
-  
-  h1 {
-    text-align: center;
-    color: #00ff00; /* Bright green */
+}
+
+/* Large desktop screens */
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 1024px; /* Adjust the max-width as needed */
   }
-  
-  .input-section {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    font-weight: bold;
-    color: #fff; /* White text */
-  }
-  
-  input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 4px;
-    border: 1px solid #666; /* Dark gray border */
-    background-color: #444; /* Dark gray input background */
-    color: #fff; /* White text */
-  }
-  
-  .buttons {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #007bff; /* Bright blue */
-    color: #fff; /* White text */
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-  }
-  
-  .summary {
-    margin-top: 20px;
-  }
-  
-  .summary h2 {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-    color: #00ff00; /* Bright green */
-  }
-  
-  .summary p {
-    margin: 10px 0;
-  }
-  
-  .summary span {
-    font-weight: bold;
-  }
-  
-  .timeline {
-    margin-top: 20px;
-  }
-  
-  .timeline h2 {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-    color: #00ff00; /* Bright green */
-  }
-  
-  #transaction-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  #transaction-list li {
-    margin: 5px 0;
-    padding: 5px;
-    border-left: 3px solid #007bff; /* Bright blue */
-    background-color: #444; /* Dark gray */
-    color: #fff; /* White text */
-    transition: background-color 0.3s ease;
-  }
-  
-  #transaction-list li:hover {
-    background-color: #333; /* Darker gray on hover */
-  }
-  .live-bg video{ position: absolute; right: 0; bottom: 0; z-index: -1; }  @media(min-aspect-ratio:16/9){.live-bg  video {width: 150%; height: auto; }} 
+}

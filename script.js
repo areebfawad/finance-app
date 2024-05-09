@@ -9,6 +9,7 @@ function addIncome() {
     transactions.push({ type: "Income", amount: amount, time: new Date() });
     updateSummary();
     updateTransactionHistory();
+    clearInput();
   }
 }
 
@@ -19,6 +20,7 @@ function addExpenditure() {
     transactions.push({ type: "Expenditure", amount: amount, time: new Date() });
     updateSummary();
     updateTransactionHistory();
+    clearInput();
   }
 }
 
@@ -42,13 +44,53 @@ function updateSummary() {
 }
 
 function updateTransactionHistory() {
-  const transactionList = document.getElementById("transaction-list");
-  transactionList.innerHTML = "";
-  transactions.forEach(transaction => {
-    const listItem = document.createElement("li");
+  const transactionTable = document.getElementById("transaction-table");
+  const tbody = transactionTable.querySelector("tbody");
+  tbody.innerHTML = "";
+  
+  transactions.forEach((transaction, index) => {
+    const row = document.createElement("tr");
+    
+    // Transaction Type
+    const typeCell = document.createElement("td");
+    typeCell.textContent = transaction.type;
+    row.appendChild(typeCell);
+    
+    // Date
+    const dateCell = document.createElement("td");
     const date = new Date(transaction.time);
-    const formattedDate = `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
-    listItem.textContent = `${formattedDate} - ${transaction.type}: $${transaction.amount.toFixed(2)}`;
-    transactionList.appendChild(listItem);
+    dateCell.textContent = date.toLocaleDateString();
+    row.appendChild(dateCell);
+    
+    // Time
+    const timeCell = document.createElement("td");
+    timeCell.textContent = date.toLocaleTimeString();
+    row.appendChild(timeCell);
+    
+    // Balance
+    const balanceCell = document.createElement("td");
+    const balance = calculateBalance(index);
+    balanceCell.textContent = balance.toFixed(2);
+    row.appendChild(balanceCell);
+    
+    tbody.appendChild(row);
   });
 }
+
+function calculateBalance(transactionIndex) {
+  let balance = 0;
+  for (let i = 0; i <= transactionIndex; i++) {
+    const transaction = transactions[i];
+    if (transaction.type === "Income") {
+      balance += transaction.amount;
+    } else {
+      balance -= transaction.amount;
+    }
+  }
+  return balance;
+}
+
+function clearInput() {
+  document.getElementById("amount").value = ""; // Reset input field to empty string
+}
+ 
