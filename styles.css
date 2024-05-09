@@ -19,7 +19,7 @@ body {
 
 h1 {
   text-align: center;
-  color: #00ff00; /* Bright green */
+  color: #00ff00; /* Bright green */ 
 }
 
 .input-section {
@@ -38,12 +38,12 @@ input {
   border-radius: 4px;
   border: 1px solid #666; /* Dark gray border */
   background-color: #444; /* Dark gray input background */
-  color: #fff; /* White text */
+  color: #fff; /* White text */opacity: 0.7;
 }
 
 .buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;opacity: 0.7;
 }
 
 button {
@@ -53,44 +53,44 @@ button {
   cursor: pointer;
   background-color: #007bff; /* Bright blue */
   color: #fff; /* White text */
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;opacity: 0.7;
 }
 
 button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3; /* Darker blue on hover */opacity: 0.7;
 }
 
 .summary {
-  margin-top: 20px;
+  margin-top: 20px;opacity: 0.7;
 }
 
 .summary h2 {
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
-  color: #00ff00; /* Bright green */
+  color: #00ff00; /* Bright green */ 
 }
 
 .summary p {
-  margin: 10px 0;
+  margin: 10px 0;opacity:  
 }
 
 .summary span {
-  font-weight: bold;
+  font-weight: bold;opacity:  
 }
 
 .timeline {
-  margin-top: 20px;
+  margin-top: 20px;opacity: 0.7;
 }
 
 .timeline h2 {
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
-  color: #00ff00; /* Bright green */
+  color: #00ff00; /* Bright green */ 
 }
 
 #transaction-list {
   list-style-type: none;
-  padding: 0;
+  padding: 0;opacity: 0.7;
 }
 
 #transaction-list li {
@@ -99,11 +99,11 @@ button:hover {
   border-left: 3px solid #007bff; /* Bright blue */
   background-color: #444; /* Dark gray */
   color: #fff; /* White text */
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;opacity: 0.7;
 }
 
 #transaction-list li:hover {
-  background-color: #333; /* Darker gray on hover */
+  background-color: #333; /* Darker gray on hover */opacity: 0.7;
 }
 .live-bg video{ position: absolute; right: 0; bottom: 0; z-index: -1; }  @media(min-aspect-ratio:16/9){.live-bg  video {width: 150%; height: auto; }}  .summary {
   margin-top: 20px;
