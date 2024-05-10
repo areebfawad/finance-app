@@ -3,7 +3,7 @@ body {
   background-color: #1a1a1a; /* Dark background */
   color: transparent ; /* White text */
   margin: 0;
-  padding: 0; 
+  padding: 10px; 
      
   }
   
@@ -71,7 +71,7 @@ input {
   border-radius: 4px;
   cursor: pointer;
   background-color: #00ff00; /* Bright blue */
-  color: #fff; /* White text */
+  color: black  /* White text */
   transition: background-color 0.3s ease; opacity: 0.9;
 }
 
